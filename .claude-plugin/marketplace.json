@@ -9,17 +9,20 @@
     {
       "name": "code-review",
       "description": "Single-pass code review focused on clean code and OOP principles with auto mode detection.",
-      "path": "code-review/SKILL.md"
+      "path": "code-review/SKILL.md",
+      "source": "./code-review"
     },
     {
       "name": "context-engineering",
       "description": "Principles for designing context-efficient AI agents and tools. Use when designing LLM tools, agents, MCP servers, or multi-agent systems.",
-      "path": "context-engineering/SKILL.md"
+      "path": "context-engineering/SKILL.md",
+      "source": "./context-engineering"
     },
     {
       "name": "create-pr",
       "description": "Create a GitHub PR from the current branch with convention-aware title, concise summary, and review guide.",
-      "path": "create-pr/SKILL.md"
+      "path": "create-pr/SKILL.md",
+      "source": "./create-pr"
     }
   ]
 }
