@@ -5,5 +5,11 @@
     "email": "kyungho.byoun@gmail.com",
     "url": "https://github.com/Byunk"
   },
-  "plugins": []
+  "plugins": [
+    {
+      "name": "code-review",
+      "description": "Single-pass code review focused on clean code and OOP principles with auto mode detection.",
+      "path": "code-review/SKILL.md"
+    }
+  ]
 }
