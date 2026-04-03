@@ -111,10 +111,10 @@ Classify each finding by severity:
 
 **Minor** — Convention inconsistencies, style issues, naming nitpicks, or small improvements.
 
-Format each finding as:
+Number each finding sequentially starting from 1. Format each finding as:
 
 ```
-### <severity>: one-line title
+### #N <severity>: one-line title
 
 **File:** `path/to/file.ext:line`
 **Code:** `quoted code from the diff`
@@ -125,7 +125,7 @@ Format each finding as:
 Example:
 
 ```
-### Critical: Unhandled null reference in user lookup
+### #1 Critical: Unhandled null reference in user lookup
 
 **File:** `src/services/UserService.ts:42`
 **Code:** `const email = user.profile.email`
