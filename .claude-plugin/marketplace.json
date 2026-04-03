@@ -15,6 +15,11 @@
       "name": "context-engineering",
       "description": "Principles for designing context-efficient AI agents and tools. Use when designing LLM tools, agents, MCP servers, or multi-agent systems.",
       "path": "context-engineering/SKILL.md"
+    },
+    {
+      "name": "create-pr",
+      "description": "Create a GitHub PR from the current branch with convention-aware title, concise summary, and review guide.",
+      "path": "create-pr/SKILL.md"
     }
   ]
 }
