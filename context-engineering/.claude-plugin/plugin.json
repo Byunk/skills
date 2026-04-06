@@ -1,7 +1,7 @@
 {
   "name": "context-engineering",
   "description": "Principles for designing context-efficient AI agents and tools. Use when designing LLM tools, agents, MCP servers, or multi-agent systems.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": {
     "name": "Kyungho Byoun",
     "email": "kyungho.byoun@gmail.com"

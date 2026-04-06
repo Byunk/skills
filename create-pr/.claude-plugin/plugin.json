@@ -1,7 +1,7 @@
 {
   "name": "create-pr",
   "description": "Create a GitHub PR from the current branch with convention-aware title, concise summary, and review guide.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": {
     "name": "Kyungho Byoun",
     "email": "kyungho.byoun@gmail.com"
