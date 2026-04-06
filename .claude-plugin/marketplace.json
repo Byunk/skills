@@ -23,6 +23,12 @@
       "description": "Create a GitHub PR from the current branch with convention-aware title, concise summary, and review guide.",
       "path": "create-pr/skills/create-pr/SKILL.md",
       "source": "./create-pr"
+    },
+    {
+      "name": "notify",
+      "description": "Native OS notifications when Claude Code needs your attention",
+      "path": "notify/hooks/hooks.json",
+      "source": "./notify"
     }
   ]
 }

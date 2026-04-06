@@ -1,0 +1,9 @@
+{
+  "name": "notify",
+  "description": "Native OS notifications when Claude Code needs your attention",
+  "version": "1.0.0",
+  "author": {
+    "name": "Kyungho Byoun",
+    "email": "kyungho.byoun@gmail.com"
+  }
+}

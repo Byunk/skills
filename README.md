@@ -24,6 +24,7 @@ claude plugin install <skill-name>@skills
 | `code-review` | Single-pass code review focused on clean code and OOP principles with auto mode detection | `/code-review` |
 | `context-engineering` | Principles for designing context-efficient AI agents and tools | `/context-engineering` |
 | `create-pr` | Create a GitHub PR with convention-aware title, concise summary, and review guide | `/create-pr` |
+| `notify` | Native OS notifications when Claude Code needs your attention (permission requests, task completion) | Auto-triggers on `PermissionRequest` and `Stop` events |
 
 ## License
 
