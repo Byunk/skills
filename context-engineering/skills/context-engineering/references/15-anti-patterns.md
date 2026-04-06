@@ -53,8 +53,42 @@ Using the same context payload regardless of task complexity or user needs.
 
 **Why it fails:** Simple tasks get bloated context (waste), complex tasks get insufficient context (failure). Context should scale with task demands.
 
+### 7. Overengineering / Overeagerness
+Creating extra files, adding unnecessary abstractions, or building in flexibility that wasn't requested. Claude 4.6 is particularly prone to this.
+
+**Why it fails:** Adds complexity, maintenance burden, and file bloat. A bug fix doesn't need surrounding code cleaned up. A simple feature doesn't need extra configurability.
+
+```
+# Bad: Asked to fix a null check, also refactors the file
+Fix: added null check to getUserName()
+Bonus: extracted helper utility, added type annotations to 8 functions,
+       created new error handling abstraction...
+
+# Good: Scoped fix
+Fix: added null check to getUserName()
+```
+
+### 8. Hard-Coding to Tests
+Writing solutions that pass specific test inputs rather than implementing general logic.
+
+**Why it fails:** Produces fragile code that breaks on any input not in the test suite. Tests verify correctness — they shouldn't define the solution.
+
+### 9. Stale Aggressive Prompts
+Keeping tool instructions written for older, more conservative models (e.g., "CRITICAL: You MUST use this tool", "If in doubt, always use...").
+
+**Why it fails:** Claude 4.6 is significantly more proactive than previous models. Aggressive instructions that compensated for under-triggering now cause over-triggering — the model reaches for tools on every interaction, even when a direct response is sufficient.
+
+```
+# Bad: Inherited from older model prompts
+"CRITICAL: You MUST use the search tool before answering ANY question"
+
+# Good: Calibrated for Claude 4.6
+"Use the search tool when you need information not in the current context"
+```
+
 ## Sources
 
 - [Building Effective Agents](https://www.anthropic.com/engineering/building-effective-agents) — Framework warnings, simplicity principle
 - [Contextual Retrieval](https://www.anthropic.com/engineering/contextual-retrieval) — Naked chunk retrieval problem
 - [Context Engineering 2.0](https://arxiv.org/pdf/2510.26493) — Static context anti-pattern
+- [Anthropic Prompting Best Practices](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview) — Overeagerness, hard-coding, stale prompt patterns in Claude 4.6

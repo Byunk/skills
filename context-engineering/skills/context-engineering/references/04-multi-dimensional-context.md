@@ -16,6 +16,7 @@ For each context design, check coverage across these dimensions:
 | **Domain** | What specialized knowledge is needed? | "Our SLA tiers: P0 = 1hr, P1 = 4hr, P2 = 24hr" |
 | **History** | What happened before this interaction? | "The customer has escalated twice already" |
 | **Constraints** | What must the model avoid or respect? | "Never auto-close P0 tickets" |
+| **Motivation** | Why does this matter? What's the goal? | "Response will be read aloud by a TTS engine" |
 | **Format** | What should the output look like? | "Return JSON: {urgency, reasoning, suggested_action}" |
 
 ## Example

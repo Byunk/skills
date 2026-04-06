@@ -13,6 +13,13 @@ When an agent calls a tool, the tool description *is* the context the model uses
 - Test tools with actual model usage, not just human review.
 - Draw clear boundaries between similar tools so the model knows which to pick.
 
+### Calibrate Action Language (Claude 4.6+)
+
+- **Be explicit about intended actions.** "Change this function" triggers tool use; "Can you suggest changes" may only produce text suggestions. Use direct action language when you want the model to act.
+- **Tune proactivity.** Use `<default_to_action>` to make the model implement changes rather than describe them. Use `<do_not_act_before_instructions>` to make it research-first and only act on explicit requests.
+- **Optimize parallel tool calling.** Claude 4.6 excels at parallel execution. Prompt with "make all independent tool calls in parallel" to boost parallelism to near 100%.
+- **Watch for overtriggering.** Instructions like "CRITICAL: You MUST use this tool when..." were needed for older models but cause overtriggering in Claude 4.6. Dial back to normal language: "Use this tool when...".
+
 ## Example
 
 Bad tool description:
@@ -51,3 +58,4 @@ Good tool description:
 
 - [Building Effective Agents](https://www.anthropic.com/engineering/building-effective-agents) — "Invest just as much effort in creating good agent-computer interfaces (ACI)"
 - [Building Effective Agents](https://www.anthropic.com/engineering/building-effective-agents) — "Poka-yoke your tools by redesigning arguments to make mistakes harder"
+- [Anthropic Prompting Best Practices](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview) — Tool action language, parallel calling, overtriggering in Claude 4.6
