@@ -99,7 +99,8 @@ Structure the body with these two sections (adapt naming if the repo uses differ
 ```markdown
 ## Summary
 
-<1-3 sentences: what this PR does at a high level>
+<One paragraph per distinct concept (e.g., new feature, refactoring, bug fix).
+Separate paragraphs with a blank line. Each paragraph should be 1-2 sentences.>
 
 ## Review guide
 
@@ -109,6 +110,7 @@ Structure the body with these two sections (adapt naming if the repo uses differ
 
 Rules:
 - The summary explains **what** this PR does concisely.
+- When a PR mixes distinct concerns (e.g., a new feature AND a refactoring, or a bug fix AND a cleanup), write each concern as its own paragraph so readers can distinguish them at a glance.
 - The review guide tells reviewers where to start and flags non-obvious design decisions.
 - Keep the entire body under 20 lines. Conciseness is mandatory.
 - Do not list every file changed. Focus on what matters for understanding and reviewing.
