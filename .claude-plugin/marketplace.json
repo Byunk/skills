@@ -29,6 +29,12 @@
       "description": "Native OS notifications when Claude Code needs your attention",
       "path": "notify/hooks/hooks.json",
       "source": "./notify"
+    },
+    {
+      "name": "explain",
+      "description": "Semantic code explanation that prioritizes why over what.",
+      "path": "explain/skills/explain/SKILL.md",
+      "source": "./explain"
     }
   ]
 }
